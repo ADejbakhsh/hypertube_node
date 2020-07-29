@@ -15,7 +15,7 @@ export default async function setupPassport(server: Express) {
 	passport.use(new FortyTwoStrategy({
 	clientID: process.env.client_id_42,
 	clientSecret: process.env.client_secret_42,
-	callbackURL: "http://127.0.0.1:8080/oauth42/callback",
+	callbackURL: "http://109.24.205.20/oauth42/callback",
 	profileFields: {
         'id': function (obj: any) { return String(obj.id); },
         'login': 'login',

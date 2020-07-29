@@ -10,12 +10,11 @@ FROM node:12-alpine
 
 WORKDIR /front
 #RUN apt-get install -y yarn zsh vim
-RUN apk add yarn zsh vim curl git
+RUN apk add yarn zsh vim curl git python make g++
 
 
 
 RUN yarn global add @vue/cli typescript
-RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 COPY package.json /front
 #COPY yarn.lock /front
 RUN yarn install

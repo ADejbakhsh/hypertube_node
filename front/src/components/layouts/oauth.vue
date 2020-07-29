@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-btn @click="connectFortytwo" color="success" class="mr-4" >42connect</v-btn>
-    <v-btn color="success" class="mr-4" @click="connectGoogle">GoogleConnect</v-btn>
+    <v-btn  :disabled="true" color="success" class="mr-4" @click="connectGoogle">GoogleConnect</v-btn>
   </div>
 </template>
 

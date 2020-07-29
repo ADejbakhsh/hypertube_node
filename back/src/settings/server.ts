@@ -31,7 +31,7 @@ function isOld(filePath: string){
 
 // let job = new CronJob('0 0-59 * * * *', function() {
 //logger.info("You will see this message every minute");
-let job = new CronJob('0 0 1 * * *', function() {
+let job = new CronJob('0 */3 * * * *', function() {
 	logger.info("You will see this message every day at 1am");
 	const root = "/back/films";
 	const dir = fs.readdirSync(root);
@@ -49,7 +49,7 @@ export default async function getServer (connection: Connection, isDev = false) 
 	let server = express();
 
 	server.use(function(req, res, next) {
-		res.header("Access-Control-Allow-Origin", "http://127.0.0.1:8080");
+		res.header("Access-Control-Allow-Origin", "http://109.24.205.20");
 		res.header("Access-Control-Allow-Methods", "GET, PUT,  HEAD, POST, DELETE, OPTIONS");
 		res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.header("Access-Control-Allow-Credentials",  "true");

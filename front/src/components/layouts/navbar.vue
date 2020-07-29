@@ -5,7 +5,7 @@
       <v-toolbar-title>
         <h3>
           <router-link to="/" v-slot="{ href, route, navigate}">
-            <a :href="href" @click="navigate">Hypertubulaire</a>
+            <a :href="href" @click="navigate">Hypertube</a>
           </router-link>
         </h3>
       </v-toolbar-title>
